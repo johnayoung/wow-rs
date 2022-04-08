@@ -1,0 +1,152 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'wow-rs'",
+      "cargo": {
+        "args": ["test", "--no-run", "--lib", "--package=wow-rs"],
+        "filter": {
+          "name": "wow-rs",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'main'",
+      "cargo": {
+        "args": ["build", "--bin=main", "--package=wow-rs"],
+        "filter": {
+          "name": "main",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'main'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=main", "--package=wow-rs"],
+        "filter": {
+          "name": "main",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'wow_rs_dll'",
+      "cargo": {
+        "args": ["build", "--example=wow_rs_dll", "--package=wow-rs"],
+        "filter": {
+          "name": "wow_rs_dll",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'wow_rs_dll'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=wow_rs_dll",
+          "--package=wow-rs"
+        ],
+        "filter": {
+          "name": "wow_rs_dll",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'inject copy'",
+      "cargo": {
+        "args": ["build", "--example=inject copy", "--package=wow-rs"],
+        "filter": {
+          "name": "inject copy",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'inject copy'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=inject copy",
+          "--package=wow-rs"
+        ],
+        "filter": {
+          "name": "inject copy",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'inject'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=inject",
+          "--package=wow-rs",
+          "--target=i686-pc-windows-msvc"
+        ],
+        "filter": {
+          "name": "inject",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "RUST_LOG": "info"
+      }
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'inject'",
+      "cargo": {
+        "args": ["test", "--no-run", "--example=inject", "--package=wow-rs"],
+        "filter": {
+          "name": "inject",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
